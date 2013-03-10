@@ -1,8 +1,7 @@
+"use strict";
 
-/*
- * GET home page.
- */
+var util = require('util');
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+module.exports = function (app) {
+  //
 };
