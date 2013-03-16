@@ -1,16 +1,17 @@
-.masthead
-      h3.muted faadumovie
-        .navbar
+.navbar-wrapper
+      .container
+        .navbar.navbar-inverse
           .navbar-inner
-            .container
+            button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.brand(href='/') faadumovie
+            .nav-collapse.collapse
               ul.nav
                 li.active
                   a(href='/') Home
                 li
-                  a(href='/') Reviews
+                  a(href='/') Review
                 li
                   a(href='/') List
-                li
-                  a(href='/') About
-                li
-                  a(href='/') Contact
