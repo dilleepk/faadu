@@ -1,0 +1,9 @@
+extends ../cmslayout
+block header
+  include header
+  if(cms.header)
+    | !{cms.header}
+block content
+  if(cms.content)
+    |!{cms.content}
+block footer

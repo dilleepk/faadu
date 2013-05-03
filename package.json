@@ -2,6 +2,7 @@
   "name": "faadumovie",
   "version": "0.0.1",
   "private": true,
+  "mysql"  : "*",
   "scripts": {
     "start": "node app"
   },

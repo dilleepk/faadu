@@ -1,23 +1,19 @@
 /*
 peoeple table*/
 
+DROP TABLE IF EXISTS `people`;
 
-ROP TABLE IF EXISTS `people`;
+CREATE TABLE `people` (
+  `id` int(11) NOT NULL,
+  `fname` varchar(45) DEFAULT NULL,
+  `lname` varchar(45) DEFAULT NULL,
+  `gender` varchar(45) DEFAULT NULL,
+  `DOB` varchar(45) DEFAULT NULL,
+  `visible` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-  
-CREATE TABLE `People` (
-
-	  `person_id`   int(12),
-       `gender`      varchar(1),
-       `first_name`  varchar(20),
-       `last_name`   varchar(20),
-       `email_id` varchar(128),
-       `mobile_no` int(10),
-
-       )PRIMARY KEY (`person_id`),
-  INDEX `idx_people_id` (`person_id`)
-) ENGINE=InnoDB CHARSET=utf8;
 
 
   

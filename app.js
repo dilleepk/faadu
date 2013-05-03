@@ -6,11 +6,12 @@
 var express = require('express')
   , http = require('http')
   , path = require('path');
-
+var cms=require('./routes/cms/cms');
+var config=require('./config');
 var app = express();
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
+  app.set('port',  config.port || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.basicAuth('panku', 'roorkee'));
