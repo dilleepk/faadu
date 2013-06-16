@@ -21,12 +21,13 @@ var cms = {
 		var page = {};
 		if (req[ckey]) {
 			page=req[ckey];
-			page=page['/'+req.params.page];
+			page=page[req.params.page];
 			if(!page){
 				return next(new Error('pagenot found'));
 			}
 			var options = {
 				header:page.head,
+				title: page.title,
 				content:page.body,
 				footer:page.footer
 			};
@@ -35,6 +36,16 @@ var cms = {
 		}else{
 			next(new Error("page not in cache") );
 		}
+	},
+	list: function(req, res, next){
+		var filmlist=[];
+		if(req[ckey]){
+			var pages=req[ckey];
+			for ( var page in pages){
+				filmlist.push({url:pages[page].url,name:pages[page].title});
+			}
+		}
+		res.render('review',{pages:filmlist});
 	},
 
 	error: function(err, req, res, next) {

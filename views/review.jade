@@ -1,0 +1,14 @@
+html
+  include layout
+  body
+    include menu
+    .container
+      h4 movies list
+      ul
+        each item in pages
+          li 
+            a(href="/reviews/#{item.url}")  #{item.name}
+
+
+
+

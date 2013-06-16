@@ -2,7 +2,10 @@ html
   head
     block header
   body
-    div#content
-      block content
+    include menu
+    .container-fluid
+      .row-fluid
+        .span10
+          block content
     div#footer
       block footer

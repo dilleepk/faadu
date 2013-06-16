@@ -4,6 +4,9 @@ block header
   if(cms.header)
     | !{cms.header}
 block content
-  if(cms.content)
-    |!{cms.content}
+  .media
+    .media-body
+      h4.media-heading !{cms.title}
+      if(cms.content)
+      |!{cms.content}
 block footer
