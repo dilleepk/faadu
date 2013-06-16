@@ -10,16 +10,21 @@ var connection=my.createConnection({
 });
 
 var cms={
-	query:function(qtext,cb){
+	init: function(){
 		connection.connect();
+	},
+	query: function(qtext,cb){
 		connection.query(qtext,function(err,rows){
-			connection.end();
 			cb(err,rows);
 		});
 	}
 };
 
 module.exports=cms;
+
+(function(){
+	cms.init();
+}());
 
 (function(){
 	if(require.main===module){

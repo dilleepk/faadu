@@ -14,6 +14,7 @@ var cache = {
 			var item = store[key];
 			if (item) {
 				req[key] = item.value;
+				next();
 			} else {
 				fwd(data, function(err, result) {
 					if (!err && result) {
